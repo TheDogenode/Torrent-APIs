@@ -11,12 +11,12 @@
         "value": "",
         "required": true
       },
-      "API_ID": {
+      "TELEGRAM_API": {
         "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org DO NOT put this in quotes.",
         "value": "",
         "required": true
       },
-      "API_HASH": {
+      "TELEGRAM_HASH": {
         "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
         "value": "",
         "required": true
