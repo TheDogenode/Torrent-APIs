@@ -21,8 +21,6 @@ RUN apt update
 RUN apt install nodejs -y
 RUN apt install npm -y
 
-RUN npm install
-
 COPY . .
 
 CMD ["bash","start.sh"]
