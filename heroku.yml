@@ -3,6 +3,5 @@ build:
     worker: Dockerfile
 run:
   web:
-    command:
-      - node app.js
+    command: node app.js
   worker: bash start.sh
