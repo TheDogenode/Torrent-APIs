@@ -26,7 +26,10 @@ async def start(_, message):
 
 @app.on_message(filters.command(['help']))
 async def help(_, message):
-    await message.reply_text("Example: /1337x titanic")
+    text = f'''
+    Example: /1337x titanic
+    '''
+    await message.reply_text(text, parse_mode="markdown")
 
 # Using https://api.torrent.cloudns.cl/ API and https://www.jaybeetgx.cf API based on this repo https://github.com/devillD/Torrent-Searcher
 # Implemented by https://github.com/jusidama18
