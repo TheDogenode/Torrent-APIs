@@ -1,1 +1,1 @@
-node app.js; python3 torrent.py
+npm start; python3 torrent.py
