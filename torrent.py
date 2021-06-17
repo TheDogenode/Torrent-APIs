@@ -61,7 +61,7 @@ async def find_1337x(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://api.torrent.cloudns.cl/api/1337x/{query}") \
+            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/1337x/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
@@ -189,7 +189,7 @@ async def find_piratebay(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://api.torrent.cloudns.cl/api/piratebay/{query}") \
+            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/piratebay/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
@@ -311,7 +311,7 @@ async def find_yts(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://api.torrent.cloudns.cl/api/yts/{query}") \
+            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/yts/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
@@ -436,7 +436,7 @@ async def find_torlock(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://api.torrent.cloudns.cl/api/torlock/{query}") \
+            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/torlock/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
