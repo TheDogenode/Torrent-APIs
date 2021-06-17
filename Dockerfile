@@ -1,4 +1,4 @@
-FROM python:3-slim-buster AS base
+FROM ubuntu:20.04
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
@@ -7,15 +7,13 @@ RUN chmod 777 /usr/src/app
 ENV DEBIAN_FRONTEND=noninteractive \
     APT_OPTS="-q=2 --yes"
 
-FROM base AS builder-deps
 # Install build dependencies
-RUN apt ${APT_OPTS} update && \
+RUN apt-get -qq update && \
     apt ${APT_OPTS} --no-install-recommends install apt-utils && \
     apt ${APT_OPTS} --no-install-recommends install \
       python3 \
       python3-pip
 
-FROM builder-deps AS builder
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
