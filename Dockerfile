@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM python:3-slim-buster AS base
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
