@@ -23,7 +23,7 @@
       },
       "OWNER_ID": {
         "description": "The telegram bot token that you get from @BotFather.",
-        "value": "",
+        "value": "1303747114",
         "required": true
       },
       "HEROKU_APP_NAME": {
