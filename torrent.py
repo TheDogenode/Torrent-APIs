@@ -9,8 +9,8 @@ from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 int(os.environ.get("OWNER_ID"))
-os.environ.get("HEROKU_API_KEY"))
-os.environ.get("HEROKU_APP_NAME"))
+os.environ.get("HEROKU_API_KEY")
+os.environ.get("HEROKU_APP_NAME")
 
 app = Client("JusidamaTorrent", api_id=int(os.environ.get("API_ID")), api_hash=os.environ.get("API_HASH"), bot_token=os.environ.get("BOT_TOKEN"))
 
