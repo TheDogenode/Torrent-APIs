@@ -8,11 +8,18 @@ from pyrogram import Client, filters, emoji
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-int(os.environ.get("OWNER_ID"))
-os.environ.get("HEROKU_API_KEY")
-os.environ.get("HEROKU_APP_NAME")
+def getConfig(name: str):
+    return os.environ[name]
 
-app = Client("JusidamaTorrent", api_id=int(os.environ.get("API_ID")), api_hash=os.environ.get("API_HASH"), bot_token=os.environ.get("BOT_TOKEN"))
+int(getConfig('OWNER_ID'))
+HEROKU_API_KEY = getConfig('HEROKU_API_KEY')
+HEROKU_APP_NAME = getConfig('HEROKU_APP_NAME')
+OWNER_ID = int(getConfig('OWNER_ID'))
+BOT_TOKEN = getConfig('BOT_TOKEN')
+TELEGRAM_API = getConfig('TELEGRAM_API')
+TELEGRAM_HASH = getConfig('TELEGRAM_HASH')
+
+app = Client(':memory:', api_id=int(TELEGRAM_API), api_hash=TELEGRAM_HASH, bot_token=BOT_TOKEN)
 
 
 print("\nBot Started\n")
