@@ -20,9 +20,12 @@ COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN apt update
-RUN apt install nodejs
-RUN apt install npm
+RUN apt install nodejs -y
+RUN apt install npm -y
+
 RUN npm install
+RUN npm audit fix
+RUN npm fund
 
 COPY . .
 CMD ["bash","start.sh"]
