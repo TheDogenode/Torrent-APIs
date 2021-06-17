@@ -19,5 +19,7 @@ FROM builder-deps AS builder
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+RUN npm install
+
 COPY . .
 CMD ["bash","start.sh"]
