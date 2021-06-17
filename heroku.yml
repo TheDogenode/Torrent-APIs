@@ -2,4 +2,5 @@ build:
   docker:
     worker: Dockerfile
 run:
+  web: node app.js
   worker: bash start.sh
