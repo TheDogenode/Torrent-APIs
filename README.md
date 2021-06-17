@@ -1,6 +1,14 @@
 # Torrents Api ✨
 
 > API for scraping torrents from 1337x, Piratebay, Eztv, Nyaasi, Torlock YTS and Torrent Galaxy
+
+---
+#### You can fork the repo and deploy on VPS or deploy it on Heroku :)  
+
+<p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
+
+---
+
 ---
 # How to install
 
@@ -99,9 +107,3 @@ https://torrenter-api.herokuapp.com/api/{website}/{query}/{page(optional)}
 ```
 https://torrenter-api.herokuapp.com/api/nyaasi/jujutsu kaisen/2
 ```
----
-#### You can fork the repo and deploy on VPS or deploy it on Heroku :)  
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
----
