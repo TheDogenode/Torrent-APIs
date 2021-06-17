@@ -1,8 +1,7 @@
-FROM python:3-slim-buster AS base
+FROM ubuntu:20.04
 
-WORKDIR /Bot
-
-RUN chmod -R 777 /Bot
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
 
 # Export ARGs as ENV vars so they can be shared among steps
 ENV DEBIAN_FRONTEND=noninteractive \
