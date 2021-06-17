@@ -3,5 +3,23 @@
     "description": "A torrent Scraping API",
     "repository": "https://github.com/Ryuk-me/Torrents-Api",
     "logo": "https://node-js-sample.herokuapp.com/node.png",
-    "keywords": ["node", "express", "static","cheerio","axios"]
+    "keywords": ["node", "express", "static","cheerio","axios"],
+    "stack": "container",
+    "env": {
+      "BOT_TOKEN": {
+        "description": "The telegram bot token that you get from @BotFather.",
+        "value": "",
+        "required": true
+      },
+      "API_ID": {
+        "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org DO NOT put this in quotes.",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
+        "value": "",
+        "required": true
+      }
+    }
   }
