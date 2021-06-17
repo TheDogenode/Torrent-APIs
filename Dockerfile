@@ -24,8 +24,6 @@ RUN apt install nodejs -y
 RUN apt install npm -y
 
 RUN npm install
-RUN npm audit fix
-RUN npm fund
 
 COPY . .
 CMD ["bash","start.sh"]
