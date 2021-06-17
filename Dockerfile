@@ -23,4 +23,6 @@ RUN apt install npm -y
 
 COPY . .
 
+RUN npm install
+
 CMD ["bash","start.sh"]
