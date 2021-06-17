@@ -28,7 +28,7 @@
       },
       "HEROKU_APP_NAME": {
         "description": "The telegram bot token that you get from @BotFather.",
-        "value": "",
+        "value": "jusidama-torrent-api",
         "required": true
       },
       "HEROKU_API_KEY": {
