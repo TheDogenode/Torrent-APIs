@@ -21,6 +21,7 @@ TELEGRAM_HASH = getConfig('TELEGRAM_HASH')
 
 app = Client(':memory:', api_id=int(TELEGRAM_API), api_hash=TELEGRAM_HASH, bot_token=BOT_TOKEN)
 
+TORRENT_API = f'https://{HEROKU_APP_NAME}.herokuapp.com/api'
 
 print("\nBot Started\n")
 
@@ -61,7 +62,7 @@ async def find_1337x(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/1337x/{query}") \
+            async with session.get(f"{TORRENT_API}/1337x/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
@@ -189,7 +190,7 @@ async def find_piratebay(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/piratebay/{query}") \
+            async with session.get(f"{TORRENT_API}/piratebay/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
@@ -311,7 +312,7 @@ async def find_yts(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/yts/{query}") \
+            async with session.get(f"{TORRENT_API}/yts/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
@@ -436,7 +437,7 @@ async def find_torlock(_, message):
     m = await message.reply_text("Searching")
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://{HEROKU_APP_NAME}.herokuapp.com/api/torlock/{query}") \
+            async with session.get(f"{TORRENT_API}/torlock/{query}") \
                     as resp:
                 a = json.loads(await resp.text())
     except:
